@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://block_blue.png" type="Texture" id=1]
 [ext_resource path="res://block_iron.png" type="Texture" id=2]
+[ext_resource path="res://Placeholder_SpikesUp.png" type="Texture" id=3]
+[ext_resource path="res://Placeholder_FallingBlock.png" type="Texture" id=4]
+[ext_resource path="res://Placeholder_PlayerStart.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -35,7 +38,6 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block/StaticBody2D" index="0"]
 
-visible = false
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
@@ -64,8 +66,40 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Block2/StaticBody2D" index="0"]
 
-visible = false
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="Placeholder_SpikesUp" type="Sprite" parent="." index="2"]
+
+position = Vector2( 58, 25 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Placeholder_FallingBlock" type="Sprite" parent="." index="3"]
+
+position = Vector2( 58, 25 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Animation", "Offset", "Region" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Placeholder_PlayerStart" type="Sprite" parent="." index="4"]
+
+position = Vector2( 92, 25 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+__meta__ = {
+"_edit_group_": true
+}
 
 
